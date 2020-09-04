@@ -1,5 +1,5 @@
 <div class="col-10 col-lg-8">
-    <div class="experience-entry-heading">
+    <div class="experience-entry-heading text-left">
         <!-- For multiple positions, give emphasis on the company name-->
         <h5>{{ if .company.url }}<a href={{.company.url}}>{{ .company.name }}</a>{{ else }}{{ .company.name }}{{ end }}</h5>
 
@@ -19,7 +19,7 @@
         <h6 class="designation">{{ $position.designation }}</h6>
         <p class="text-muted">{{ $position.start }} - {{if $position.end }} {{ $position.end }} {{else}} Present {{end}}</p>
         <!-- Add the responsibilities handled at this position -->
-        <ul class="justify-content-around">
+        <ul class="text-left">
         {{ range $position.responsibilities }}
             <li>{{ . | markdownify }}</li>
         {{ end }}
